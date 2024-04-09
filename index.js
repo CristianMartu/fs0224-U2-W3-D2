@@ -22,6 +22,7 @@ del.addEventListener('click', () => {
 })
 
 window.addEventListener('DOMContentLoaded', () => {
+  time = sessionStorage.getItem(TIME)
   timer()
   if (localStorage.getItem(NAME_SAVED)) {
     label.textContent = localStorage.getItem(NAME_SAVED)
@@ -34,10 +35,6 @@ window.addEventListener('beforeunload', () => {
 
 const timer = () => {
   setInterval(() => {
-    if (sessionStorage.getItem(TIME)) {
-      time = sessionStorage.getItem(TIME)
-      sessionStorage.removeItem(TIME)
-    }
     posTimer.innerText = time
     time++
   }, 1000)
