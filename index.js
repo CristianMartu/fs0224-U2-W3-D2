@@ -1,5 +1,5 @@
 const form = document.getElementById('myForm')
-const textArea = document.getElementById('textArea')
+const inputText = document.getElementById('inputText')
 const del = document.querySelector('button:last-of-type')
 const label = document.querySelector('label')
 const posTimer = document.getElementById('timer')
@@ -9,8 +9,8 @@ let time = 0
 
 form.addEventListener('submit', (event) => {
   event.preventDefault()
-  localStorage.setItem(NAME_SAVED, textArea.value)
-  label.textContent = textArea.value
+  localStorage.setItem(NAME_SAVED, inputText.value)
+  label.textContent = inputText.value
   form.reset()
 })
 
